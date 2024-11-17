@@ -5,10 +5,11 @@ const Sidebar = ({ selectedCat }) => {
   return (
     <aside className="flex flex-col p-1 md:p-4">
       {categories.map((i) => (
-        <Link to={`/?v=${i.name}`}>
+        <Link to={i.path == "/" ? "/" : `/?category=${i.path}`}>
           <div
             className={`flex items-center gap-2 py-4 px-2 md:px-3 md:text-lg cursor-pointer rounded-md hover:bg-{#2d2d2d} transition ${
-              i.name === selectedCat && "bg-[#242424]"
+              (i.path === selectedCat || (i.path === "/" && !selectedCat)) &&
+              "bg-[#242424]"
             }`}
           >
             <span className="max-md:text-2xl">{i.icon}</span>
