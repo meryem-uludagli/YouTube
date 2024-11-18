@@ -8,55 +8,56 @@ import { GiDiamondTrophy, GiEclipse } from "react-icons/gi";
 import { RiLightbulbLine, RiFeedbackLine } from "react-icons/ri";
 import { FiSettings, FiHelpCircle } from "react-icons/fi";
 
+// Kategoriler
 export const categories = [
-  { name: "Home", icon: <AiFillHome />, path: "/" },
+  { name: "Anasayfa", icon: <AiFillHome />, path: "/" },
   {
-    name: "Trending",
+    name: "Trendler",
     icon: <MdLocalFireDepartment />,
     path: "trending",
   },
   {
-    name: "Music",
+    name: "Müzik",
     icon: <CgMusicNote />,
-    path: "music",
+    path: "müzik",
   },
-  { name: "Movies", icon: <FiFilm />, path: "movies" },
-  { name: "Live", icon: <MdLiveTv />, path: "live" },
+  { name: "Filmler", icon: <FiFilm />, path: "filmler" },
+  { name: "Canlı", icon: <MdLiveTv />, path: "canlı" },
   {
-    name: "Gaming",
+    name: "Oyun",
     icon: <IoGameControllerSharp />,
-    path: "gaming",
+    path: "oyun",
   },
   {
-    name: "News",
+    name: "Haberler",
     icon: <ImNewspaper />,
-    path: "news",
+    path: "haberler",
   },
   {
-    name: "Sports",
+    name: "Spor",
     icon: <GiDiamondTrophy />,
-    path: "sports",
+    path: "sport",
   },
   {
-    name: "Educational",
+    name: "Eğitici",
     icon: <RiLightbulbLine />,
-    path: "educational",
+    path: "eğiti",
   },
   {
-    name: "Beauty & Cosmetics",
+    name: "Güzellik & Kozmetik",
     icon: <GiEclipse />,
-    path: "cosmetics",
+    path: "kozmetik",
     divider: true,
   },
-  { name: "Settings", icon: <FiSettings />, type: "menu" },
+  { name: "Ayarlar", icon: <FiSettings />, type: "menu" },
   {
     name: "Report History",
     icon: <AiOutlineFlag />,
     type: "menu",
   },
-  { name: "Help", icon: <FiHelpCircle />, type: "menu" },
+  { name: "Yardım", icon: <FiHelpCircle />, type: "menu" },
   {
-    name: "Send Feedback",
+    name: "Send feedback",
     icon: <RiFeedbackLine />,
     type: "menu",
   },

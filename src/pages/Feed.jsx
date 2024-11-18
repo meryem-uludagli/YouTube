@@ -3,6 +3,8 @@ import Card from "../components/Card";
 import Sidebar from "../components/Sidebar";
 import { useEffect, useState } from "react";
 import api from "../api/index";
+import Loader from "../components/Loader";
+import Error from "../components/Error";
 
 const Feed = () => {
   const [videos, setVideos] = useState(null);
@@ -29,11 +31,17 @@ const Feed = () => {
   return (
     <div className="flex">
       <Sidebar selectedCat={selectedCat} />
-      <div>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+
+      <div className="videos">
+        {isLoading ? (
+          <Loader />
+        ) : error ? (
+          <Error />
+        ) : (
+          videos.map(
+            (i) => i.type === "video" && <Card key={i.videoId} video={i} />
+          )
+        )}
       </div>
     </div>
   );
