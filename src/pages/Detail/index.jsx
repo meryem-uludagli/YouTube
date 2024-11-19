@@ -29,7 +29,7 @@ const Detail = () => {
         <div>
           <div className="h-[30vh] md:h-[50vh] lg:h-[60vh] rounded overflow-hidden">
             <ReactPlayer
-              //   playing={true}
+              playing={true}
               height={"100%"}
               width={"100%"}
               controls
